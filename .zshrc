@@ -48,7 +48,9 @@ source <(cilium completion zsh)
 # argocd vault
 export AVP_TYPE="vault"
 export AVP_AUTH_TYPE="token"
-export VAULT_TOKEN="s.Q8JIyJIYqogIyjL5mNvJSJv8"
+if [[ -f "~/.vault-token" ]]; then
+  export VAULT_TOKEN=$(cat ~/.vault-token)
+fi
 export VAULT_ADDR="https://vault.home.lan"
 
 # okteto
