@@ -46,7 +46,7 @@ source <(cilium completion zsh)
 # argocd vault
 export AVP_TYPE="vault"
 export AVP_AUTH_TYPE="token"
-if [[ -f "~/.vault-token" ]]; then
+if [[ -f "/home/$USER/.vault-token" ]]; then
   export VAULT_TOKEN=$(cat ~/.vault-token)
 fi
 export VAULT_ADDR="https://vault.home.lan"
