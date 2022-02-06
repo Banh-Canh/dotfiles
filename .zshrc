@@ -1,6 +1,7 @@
 # pywal
-(cat ~/.cache/wal/sequences &)
-
+if [[ -f "/home/$USER/.cache/wal/sequences" ]]; then
+  (cat ~/.cache/wal/sequences &)
+fi
 # oh-my-zsh
 ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="spaceship"
