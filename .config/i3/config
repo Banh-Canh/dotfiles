@@ -1,5 +1,5 @@
 #!/bin/bash
-set $background /usr/share/backgrounds/gnome/wallpaper015.*
+set $background /usr/share/backgrounds/gnome/wallpaper013.*
 exec --no-startup-id light -I
 exec --no-startup-id feh --no-fehbg --bg-scale $background
 exec_always --no-startup-id wal -i $background
