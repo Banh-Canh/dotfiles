@@ -71,9 +71,9 @@ gpuset()
 vpn()
 {
   if [[ $1 == "on" ]]; then
-    sudo wg-quick up wg0
+    sudo wg-quick up wg0 || echo "VPN already active."
   elif [[ $1 == "off" ]]; then
-    sudo wg-quick down wg0
+    sudo wg-quick down wg0 || echo "VPN not currently active. Nothing to disable"
   else
     echo "Please use 'vpn on' or 'vpn off' !"
   fi
