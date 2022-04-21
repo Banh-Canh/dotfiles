@@ -29,6 +29,14 @@ alias ll="ls -hlt"
 alias l="ls -halt"
 neofetch
 
+# kube-ps1
+source '/opt/kube-ps1/kube-ps1.sh'
+PROMPT='$(kube_ps1)'$PROMPT
+
+# kubeswitch
+source /usr/bin/switch.sh
+source $HOME/.config/_switch_completion.sh
+
 # kubectl
 source <(kubectl completion zsh)
 alias k=kubectl
