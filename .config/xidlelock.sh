@@ -15,5 +15,5 @@ xidlehook \
     'light -I' \
   `# Finally, suspend after it locks` \
   --timer 240 \
-    'light -I && systemctl suspend' \
+    'light -I && systemctl suspend-then-hibernate' \
     ''
